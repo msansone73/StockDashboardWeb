@@ -1,0 +1,2 @@
+# StockDashboardWeb
+StockDashboard Angular
