@@ -1,1 +1,18 @@
 <h2>Stock</h2>
+
+<p>Number of stocks: {{ stocks.length }}</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tick</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stock of stocks">
+      <td>{{ stock.tick }}</td>
+      <td>{{ stock.company }}</td>
+    </tr>
+  </tbody>
+</table>
