@@ -1,5 +1,10 @@
 <h2>Stock</h2>
 
+<div>
+  <input type="text" [(ngModel)]="filterTick" placeholder="Enter stock tick">
+  <button (click)="filterStock()">Filter</button>
+</div>
+
 <p>Number of stocks: {{ stocks.length }}</p>
 
 <table>

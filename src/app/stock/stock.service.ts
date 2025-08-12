@@ -15,4 +15,9 @@ export class StockService {
   getStocks(): Observable<Stock[]> {
     return this.http.get<Stock[]>(this.apiUrl);
   }
+
+  getStockByTick(tick: string): Observable<Stock> {
+    return this.http.get<Stock>(`${this.apiUrl}/${tick}`);
+  }
 }
+
