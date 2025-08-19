@@ -5,6 +5,7 @@ import { Transactions } from './transactions/transactions';
 import { Provents } from './provents/provents';
 import { Admin } from './admin/admin';
 import { About } from './about/about';
+import { UploadExcelComponent } from './upload-excel/upload-excel';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,5 +14,6 @@ export const routes: Routes = [
     { path: 'transactions', component: Transactions },
     { path: 'provents', component: Provents },
     { path: 'admin', component: Admin },
-    { path: 'about', component: About }
+    { path: 'about', component: About },
+    { path: 'upload-excel', component: UploadExcelComponent }
 ];
