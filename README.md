@@ -1,6 +1,22 @@
-# StockDashboardWeb
+# Stock Dashboard Web
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
+This project is a web application built with Angular for managing and visualizing a stock portfolio.
+
+## Features
+
+*   **Home:** A landing page for the application.
+*   **Stock:** View and manage your stock portfolio.
+*   **Transactions:** Track your stock transactions.
+*   **Provents:** Monitor stock earnings, dividends, and other proceeds.
+*   **Admin:** An administrative section for managing the application.
+*   **About:** Information about the application.
+*   **Upload Excel:** Import data from Excel files.
+
+## Technologies
+
+*   [Angular](https://angular.io/)
+*   [RxJS](https://rxjs.dev/)
+*   [TypeScript](https://www.typescriptlang.org/)
 
 ## Development server
 
