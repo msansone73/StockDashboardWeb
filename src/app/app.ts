@@ -11,7 +11,7 @@ import { About } from './about/about';
   selector: 'app-root',
   imports: [RouterOutlet, RouterLink, Home, StockComponent, Transactions, Provents, Admin, About],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  
 })
 export class App {
 }

@@ -58,3 +58,167 @@ th {
   background-color: #2e8b57;
   color: white;
 }
+
+/* from app.css */
+.app-container {
+  display: flex;
+}
+
+.left-menu {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  height: 100vh;
+}
+
+.left-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-menu li {
+  margin-bottom: 10px;
+}
+
+.left-menu a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.left-menu a span {
+  margin-left: 10px;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.header {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column-reverse;
+  }
+
+  .left-menu {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+  }
+
+  .left-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .left-menu li {
+    margin-bottom: 0;
+  }
+
+  .left-menu a span {
+    display: none;
+  }
+
+  .main-content {
+    padding-bottom: 70px; /* Adjust this value based on the menu height */
+  }
+}
+
+/* from stock.css */
+.stock-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
+}
+
+#stock-select {
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: column; /* Stack panels on mobile */
+  gap: 1rem;
+}
+
+.panel {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.resumo-panel {
+  width: 100%;
+}
+
+.resumo-content {
+  display: flex;
+  flex-direction: column; /* Stack columns on mobile */
+  gap: 1rem;
+}
+
+.resumo-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.transactions-panel {
+  flex: 1;
+}
+
+.provents-panel {
+  flex: 1;
+}
+
+/* Tablet and desktop styles */
+@media (min-width: 768px) {
+  .bottom-section {
+    display: grid; /* Use grid for equal height panels */
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .resumo-content {
+    flex-direction: row; /* Side-by-side columns on larger screens */
+  }
+
+  #stock-select {
+    width: auto; /* Allow the select to size based on its content on larger screens */
+  }
+}

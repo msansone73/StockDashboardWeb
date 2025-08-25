@@ -1,23 +1,88 @@
-<h2>Stock</h2>
+<div class="stock-container">
+  <div class="top-section">
+    <label for="stock-select">Stocks:</label>
+    <select id="stock-select" [(ngModel)]="selectedStock">
+      <option *ngFor="let stock of stocks" [ngValue]="stock">{{ stock.tick }} - {{ stock.company }}</option>
+    </select>
+  </div>
 
-<div>
-  <input type="text" [(ngModel)]="filterTick" placeholder="Enter stock tick">
-  <button (click)="filterStock()">Filter</button>
+  <div class="panel resumo-panel">
+    <h2>Resumo</h2>
+    <div class="resumo-content">
+      <div class="resumo-column">
+        <div>
+          <label>Quantidade de Ações:</label>
+          <span>{{ selectedStock?.quantidadeAcoes }}</span>
+        </div>
+        <div>
+          <label>Total investido:</label>
+          <span>{{ selectedStock?.totalInvestido | currency:'BRL' }}</span>
+        </div>
+        <div>
+          <label>Valor médio:</label>
+          <span>{{ selectedStock?.valorMedio | currency:'BRL' }}</span>
+        </div>
+      </div>
+      <div class="resumo-column">
+        <div>
+          <label>Valor total de proventos:</label>
+          <span>{{ selectedStock?.valorTotalProventos | currency:'BRL' }}</span>
+        </div>
+        <div>
+          <label>Proventos dos ultimos 12 meses:</label>
+          <span>{{ selectedStock?.proventosUltimos12Meses | currency:'BRL' }}</span>
+        </div>
+        <div>
+          <label>Media dos ultimos 4 meses:</label>
+          <span>{{ selectedStock?.mediaUltimos4Meses | currency:'BRL' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-section">
+    <div class="panel transactions-panel">
+      <h2>Transactions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Valor</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of selectedStock?.transactions">
+            <td>{{ transaction.data | date:'dd/MM/yyyy' }}</td>
+            <td>{{ transaction.valor | currency:'BRL' }}</td>
+            <td>{{ transaction.quantidade }}</td>
+            <td>{{ transaction.total | currency:'BRL' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel provents-panel">
+      <h2>Provents</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Valor</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let provent of selectedStock?.provents">
+            <td>{{ provent.data | date:'dd/MM/yyyy' }}</td>
+            <td>{{ provent.valor | currency:'BRL' }}</td>
+            <td>{{ provent.quantidade }}</td>
+            <td>{{ provent.total | currency:'BRL' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
-
-<p>Number of stocks: {{ stocks.length }}</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Tick</th>
-      <th>Company</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let stock of stocks">
-      <td>{{ stock.tick }}</td>
-      <td>{{ stock.company }}</td>
-    </tr>
-  </tbody>
-</table>
