@@ -1,26 +1,36 @@
-export interface Transaction {
-  data: Date;
-  valor: number;
-  quantidade: number;
-  total: number;
-}
-
-export interface Provent {
-  data: Date;
-  valor: number;
-  quantidade: number;
-  total: number;
-}
-
 export interface Stock {
   tick: string;
   company: string;
-  quantidadeAcoes: number;
-  totalInvestido: number;
-  valorMedio: number;
-  valorTotalProventos: number;
-  proventosUltimos12Meses: number;
-  mediaUltimos4Meses: number;
+}
+
+export interface Resume {
+  stockCount: number;
+  totalInvested: number;
+  averagePrice: number;
+  totalProvents: number;
+  totalProventsLast12Months: number;
+  averageProventsLast4Months: number;
+}
+
+export interface Transaction {
+  id: number;
+  date: string;
+  movimentacao: string;
+  stock: Stock;
+}
+
+export interface Provent {
+  id: number;
+  date: string;
+  type: string;
+  stock: Stock;
+  valueTotal: number;
+  quantity: number;
+}
+
+export interface StockDetail {
+  tick: string;
+  resume: Resume;
   transactions: Transaction[];
   provents: Provent[];
 }

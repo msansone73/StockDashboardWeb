@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Stock } from './stock.model';
+import { Stock, StockDetail } from './stock.model';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -18,8 +18,8 @@ export class StockService {
     return this.http.get<Stock[]>(this.apiUrl);
   }
 
-  getStockByTick(tick: string): Observable<Stock> {
-    return this.http.get<Stock>(`${this.apiUrl}/${tick}`);
+  getStockDetailByTick(tick: string): Observable<StockDetail> {
+    return this.http.get<StockDetail>(`${this.apiUrl}/detail/${tick}`);
   }
 }
 
