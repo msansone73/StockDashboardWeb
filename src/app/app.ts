@@ -9,7 +9,7 @@ import { About } from './about/about';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, Home, StockComponent, Transactions, Provents, Admin, About],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   
 })

@@ -2,7 +2,8 @@
   <div class="top-section">
     <label for="stock-select">Stocks:</label>
     <select id="stock-select" [(ngModel)]="selectedStockTick" (ngModelChange)="onStockSelected()">
-      <option *ngFor="let stock of stocks" [ngValue]="stock.tick">{{ stock.tick }} - {{ stock.company }}</option>
+      <option *ngFor="let stock of stocks" [ngValue]="stock.tick">{{ stock.tick }} - {{ stock.company }} </option>
+
     </select>
   </div>
 
