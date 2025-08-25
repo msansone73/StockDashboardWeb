@@ -1,4 +1,6 @@
+
 export interface StockResume {
+
   stockCount: number;
   totalInvested: number;
   averagePrice: number;
@@ -6,6 +8,7 @@ export interface StockResume {
   totalProventsLast12Months: number;
   averageProventsLast4Months: number;
 }
+
 
 export interface StockInfo {
   tick: string;
@@ -26,6 +29,7 @@ export interface StockTransaction {
   totalPrice: number;
   quantity: number;
   institution: Institution;
+
 }
 
 export interface Provent {
@@ -33,6 +37,7 @@ export interface Provent {
   date: string;
   type: string;
   stock: StockInfo;
+
   valueTotal: number;
   quantity: number;
 }
