@@ -1,9 +1,4 @@
-export interface Stock {
-  tick: string;
-  company: string;
-}
-
-export interface Resume {
+export interface StockResume {
   stockCount: number;
   totalInvested: number;
   averagePrice: number;
@@ -12,25 +7,39 @@ export interface Resume {
   averageProventsLast4Months: number;
 }
 
-export interface Transaction {
+export interface StockInfo {
+  tick: string;
+  company: string;
+}
+
+export interface Institution {
+  id: number;
+  name: string;
+}
+
+export interface StockTransaction {
   id: number;
   date: string;
   movimentacao: string;
-  stock: Stock;
+  stock: StockInfo;
+  untPrice: number;
+  totalPrice: number;
+  quantity: number;
+  institution: Institution;
 }
 
 export interface Provent {
   id: number;
   date: string;
   type: string;
-  stock: Stock;
+  stock: StockInfo;
   valueTotal: number;
   quantity: number;
 }
 
-export interface StockDetail {
-  tick: string;
-  resume: Resume;
-  transactions: Transaction[];
+export interface StockData {
+  ticker: string;
+  resume: StockResume;
+  transactions: StockTransaction[];
   provents: Provent[];
 }

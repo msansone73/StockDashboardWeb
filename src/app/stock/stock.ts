@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
-import { Stock, StockDetail } from './stock.model';
+import { StockData, StockInfo } from './stock.model';
 import { StockService } from './stock.service';
 
 @Component({
@@ -11,9 +11,9 @@ import { StockService } from './stock.service';
   styleUrls: ['./stock.css']
 })
 export class StockComponent implements OnInit {
-  stocks: Stock[] = [];
+  stocks: StockInfo[] = [];
   selectedStockTick: string | undefined;
-  selectedStockDetail: StockDetail | undefined;
+  selectedStockDetail: StockData | undefined;
 
   constructor(private stockService: StockService, private cdr: ChangeDetectorRef) { }
 
