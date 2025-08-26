@@ -36,7 +36,7 @@
           </div>
           <div>
             <label>Media dos ultimos 4 meses:</label>
-            <span>{{ selectedStockDetail.resume.averageProventsLast4Months | currency:'BRL' }}</span>
+            <span>{{ (selectedStockDetail.resume.averageProventsLast4Months || 0) | currency:'BRL' }}</span>
           </div>
         </div>
       </div>
