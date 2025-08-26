@@ -1,8 +1,9 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
-import { Stock, StockDetail } from './stock.model';
-import { StockService } from './stock.service';
+import { Stock } from '../../models/stock.model';
+import { StockDetail } from '../../models/stock-detail.model';
+import { StockService } from '../../services/stock.service';
 
 @Component({
   selector: 'app-stock',
