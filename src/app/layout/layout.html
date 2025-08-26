@@ -1,0 +1,21 @@
+<div class="app-container">
+  <div class="left-menu">
+    <ul>
+      <li><a routerLink="/home"><i class="material-icons">home</i><span>Home</span></a></li>
+      <li><a routerLink="/stock"><i class="material-icons">show_chart</i><span>Stock</span></a></li>
+      <li><a routerLink="/transactions"><i class="material-icons">receipt_long</i><span>Transactions</span></a></li>
+      <li><a routerLink="/provents"><i class="material-icons">paid</i><span>Provents</span></a></li>
+      <li><a routerLink="/admin"><i class="material-icons">admin_panel_settings</i><span>Admin</span></a></li>
+      <li><a routerLink="/upload-excel"><i class="material-icons">upload_file</i><span>Upload Excel</span></a></li>
+      <li><a routerLink="/about"><i class="material-icons">info</i><span>About</span></a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="header">
+      <h1>Stock Dashboard</h1>
+    </div>
+    <div class="content">
+      <router-outlet />
+    </div>
+  </div>
+</div>
