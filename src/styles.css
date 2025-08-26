@@ -4,8 +4,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f8f0; /* A light green background */
-  color: #333;
+  background-color: #121212; /* Dark gray */
+  color: #ffffff; /* White */
 }
 
 .container {
@@ -15,11 +15,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2e8b57; /* Sea green */
+  color: #ffffff; /* White */
 }
 
 a {
-  color: #2e8b57;
+  color: #ffffff; /* White */
   text-decoration: none;
 }
 
@@ -28,7 +28,7 @@ a:hover {
 }
 
 button {
-  background-color: #2e8b57; /* Sea green */
+  background-color: #333333; /* Darker gray */
   color: white;
   padding: 10px 15px;
   border: none;
@@ -38,7 +38,7 @@ button {
 }
 
 button:hover {
-  background-color: #3cb371; /* Medium sea green */
+  background-color: #555555; /* Lighter gray */
 }
 
 /* Add some basic table styling */
@@ -49,13 +49,13 @@ table {
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #444444; /* Gray border */
   padding: 8px;
   text-align: left;
 }
 
 th {
-  background-color: #2e8b57;
+  background-color: #333333; /* Darker gray */
   color: white;
 }
 
@@ -66,7 +66,7 @@ th {
 
 .left-menu {
   width: 200px;
-  background-color: #f0f0f0;
+  background-color: #1E1E1E; /* Slightly lighter dark gray */
   padding: 20px;
   height: 100vh;
 }
@@ -83,7 +83,7 @@ th {
 
 .left-menu a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff; /* White */
   display: flex;
   align-items: center;
 }
@@ -97,9 +97,9 @@ th {
 }
 
 .header {
-  background-color: #fff;
+  background-color: #1E1E1E; /* Slightly lighter dark gray */
   padding: 20px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #444444; /* Gray border */
 }
 
 .header h1 {
@@ -122,7 +122,7 @@ th {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #f0f0f0;
+    background-color: #1E1E1E; /* Slightly lighter dark gray */
     padding: 10px 0;
     z-index: 1000;
     display: flex;
@@ -167,6 +167,9 @@ th {
   width: 100%;
   max-width: 500px; /* Adjust as needed */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #444444;
 }
 
 .bottom-section {
@@ -176,9 +179,10 @@ th {
 }
 
 .panel {
-  border: 1px solid #ccc;
+  border: 1px solid #444444; /* Gray border */
   padding: 1rem;
   border-radius: 5px;
+  background-color: #1E1E1E;
 }
 
 .resumo-panel {
@@ -221,4 +225,14 @@ th {
   #stock-select {
     width: auto; /* Allow the select to size based on its content on larger screens */
   }
+}
+
+.resumo-column > div {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 1rem;
+}
+
+.resumo-column label {
+  font-weight: bold;
 }
