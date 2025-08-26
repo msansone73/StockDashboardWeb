@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { Home } from './home/home';
-import { StockComponent } from './stock/stock';
-import { Transactions } from './transactions/transactions';
-import { Provents } from './provents/provents';
-import { Admin } from './admin/admin';
-import { About } from './about/about';
-import { UploadExcelComponent } from './upload-excel/upload-excel';
+import { Home } from './components/home/home';
+import { StockComponent } from './components/stock/stock';
+import { Transactions } from './components/transactions/transactions';
+import { Provents } from './components/provents/provents';
+import { Admin } from './components/admin/admin';
+import { About } from './components/about/about';
+import { UploadExcelComponent } from './components/upload-excel/upload-excel';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
